@@ -615,10 +615,10 @@ extern void mexFunction(int iNOut, mxArray *pmxOut[], int iNIn, const mxArray *p
   iNf = (int) pfVecParameters[0];   /* frame index       */
   iNy = (int) pfVecParameters[1];   /* number of rows    */
   iNx = (int) pfVecParameters[2];   /* number of columns */
-  fLambda =  pfVecParameters[3];    /* regions weight    */
-  fMu =  pfVecParameters[4];        /* curvature weight  */
-  KMax = (int) pfVecParameters[5];  /* maximum outer iterations */
-  LMax = (int) pfVecParameters[6];  /* maximum inner iterations */
+  fLambda =  pfVecParameters[3];    /* regularization parameter    */
+  fMu =  pfVecParameters[4];        /* Bregman distance parameter  */
+  KMax = (int) pfVecParameters[5];  /* maximum Bregman iterations */
+  LMax = (int) pfVecParameters[6];  /* maximum Gauss Seidel iterations */
 
   /* Output Data */
   iNOut = 11;
